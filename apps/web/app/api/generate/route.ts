@@ -13,7 +13,8 @@ export const runtime = "edge";
 export async function POST(req: Request): Promise<Response> {
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
-    baseURL: process.env.OPENAI_BASE_URL || "https://api.openai.com/v1",
+    //baseURL: process.env.OPENAI_BASE_URL || "https://api.openai.com/v1",
+    baseURL: process.env.OPENAI_BASE_URL || "https://openrouter.ai/api/v1",
   });
   // Check if the OPENAI_API_KEY is set, if not return 400
   if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY === "") {
