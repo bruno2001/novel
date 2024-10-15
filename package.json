@@ -5,7 +5,7 @@
     "changeset": "changeset",
     "publish:packages": "changeset publish",
     "version:packages": "turbo build && changeset version",
-    "build": "turbo build",
+    "build": "turbo build --output public",
     "dev": "turbo dev",
     "format": "turbo format --continue --",
     "format:fix": "turbo format --continue -- --write",
