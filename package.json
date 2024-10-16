@@ -5,13 +5,13 @@
     "changeset": "changeset",
     "publish:packages": "changeset publish",
     "version:packages": "turbo build && changeset version",
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "format": "turbo format --continue --",
+    "build": "turbo build --filter=./apps/web",
+    "dev": "turbo dev --filter=./apps/web",
+    "format": "turbo format --continue --filter=./apps/web",
     "format:fix": "turbo format --continue -- --write",
-    "lint": "turbo lint --continue --",
+    "lint": "turbo lint --continue --filter=./apps/web",
     "lint:fix": "turbo lint --continue -- --apply",
-    "clean": "turbo clean"
+    "clean": "turbo clean --filter=./apps/web"
   },
   "dependencies": {
     "@changesets/changelog-github": "^0.5.0",
